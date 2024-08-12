@@ -1,0 +1,20 @@
+llm:
+  provider: together
+  config:
+    model: meta-llama/Llama-3-8b-chat-hf
+    temperature: 0.7
+    max_tokens: 5090
+    top_p: 1
+
+embedder:
+  provider: gpt4all
+
+vectordb:
+  provider: pinecone
+  config:
+    metric: cosine
+    vector_dimension: 384
+    index_name: leapcrew-3072
+    serverless_config:
+      cloud: aws
+      region: us-west-2
